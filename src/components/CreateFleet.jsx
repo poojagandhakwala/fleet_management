@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 import CustomDropdown from "../custom/CustomDropDown";
 
 const CreateFleet = () => {
-  const [search, setSearch] = useState("");
-
   const navigate = useNavigate();
 
   const billingOptions = [
@@ -46,8 +44,7 @@ const CreateFleet = () => {
                   type="text"
                   placeholder="Shyamal Cross Road Public Fleet"
                   className="border border-gray-300 bg-white rounded-xl p-2 w-full"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
+                  
                 />
               </div>
               <div>
@@ -58,8 +55,7 @@ const CreateFleet = () => {
                   type="text"
                   placeholder="admin123@gmail.com"
                   className="border border-gray-300 bg-white rounded-xl p-2 w-full"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
+                  
                 />
               </div>
               <div>
@@ -70,9 +66,7 @@ const CreateFleet = () => {
                   type="text"
                   placeholder="super@gmail.com"
                   className="border border-gray-300 bg-white rounded-xl p-2 w-full"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
+                 />
               </div>
 
               <div className="my-1">
@@ -101,8 +95,6 @@ const CreateFleet = () => {
                   type="text"
                   placeholder="9090290001"
                   className="border border-gray-300 bg-white rounded-xl p-2 w-full"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
                 />
               </div>
 

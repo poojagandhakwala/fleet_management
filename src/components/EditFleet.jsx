@@ -10,7 +10,6 @@ import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import CustomDropdown from "../custom/CustomDropDown";
 
 const EditFleet = () => {
-  const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
   const { fleet } = location.state;
@@ -188,9 +187,7 @@ const EditFleet = () => {
                   <input
                     type="text"
                     placeholder="9093201390"
-                    className="border border-gray-300 bg-white rounded-xl p-2 w-full"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full"          
                   />
                 </div>
 
