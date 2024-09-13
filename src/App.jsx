@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Menu from './components/Menu'
 import Fleets from './components/Fleets'
-import AddFleet from './components/AddFleet'
+import CreateFleet from './components/CreateFleet'
 import EditFleet from './components/EditFleet'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <div className="w-5/6 max-lg:w-full">
             <Routes>
               <Route path='/' element={<Fleets />} />
-              <Route path='/add-fleet' element={<AddFleet />} />
+              <Route path="/add-fleet" element={<CreateFleet/>}/>
               <Route path='/edit-fleet' element={<EditFleet />} />
             </Routes>
           </div>
