@@ -124,102 +124,100 @@ const CreateFleet = () => {
             <h4 className="ml-1">Advance Settings</h4>
           </div>
           <div className="p-4">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 text-start">
-              <div className="my-1">
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Parking Requirement
-                </label>
-                <select
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
-                  defaultValue="not required"
-                >
-                  <option value="not required">Not Required</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Auto end Ride - idele vehicle
-                </label>
-                <input
-                  type="text"
-                  placeholder="Not Required"
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full"
-                />
-              </div>
-              <div>
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Auto end Ride - Paused Vehicle
-                  <span className="text-red-500 mx-1">*</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Required"
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full"
-                />
-              </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 text-start">
+                <div className="my-1">
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Parking requirement
+                  </label>
+                  <select
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
+                    defaultValue="not required"
+                  >
+                    <option value="not required">Not Required</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Auto end ride - idle vehicle
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Not Required"
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Auto end ride - paused vehicle<span className="text-red-500 mx-1">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Required"
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full"
+                  />
+                </div>
 
-              <div className="my-1">
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Auto end Ride - Critical Battery Vehicle
-                  <span className="text-red-500 mx-1">*</span>
-                </label>
-                <select
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
-                  defaultValue="not required"
-                >
-                  <option value="not applicable">Not Applicable</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Low Battery Level<span className="text-red-500 mx-1">*</span>
-                </label>
-                <select
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
-                  defaultValue="50"
-                >
-                  <option value="30">30%</option>
-                  <option value="50">50%</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Auto Close Vehicle
-                </label>
-                <select
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
-                  defaultValue="no"
-                >
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-              </div>
+                <div className="my-1">
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Auto end ride - critical battery vehicle<span className="text-red-500 mx-1">*</span>
+                  </label>
+                  <select
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
+                    defaultValue="not application"
+                  >
+                    <option value="not applicable">Not Applicable</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Low battery level<span className="text-red-500 mx-1">*</span>
+                  </label>
+                  <select
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
+                    defaultValue="50"
+                  >
+                    <option value="30">30%</option>
+                    <option value="50">50%</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Auto close vehicle
+                  </label>
+                  <select
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
+                    defaultValue="no"
+                  >
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
 
-              <div className="">
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Distance to Lock & unlock Vehicle
-                </label>
-                <select
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
-                  defaultValue="30"
-                >
-                  <option value="30">30 meter</option>
-                  <option value="50">50 meter</option>
-                </select>
+                <div className="">
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Distance to lock & unlock vehicle
+                  </label>
+                  <select
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
+                    defaultValue="30"
+                  >
+                    <option value="30">30 meter</option>
+                    <option value="50">50 meter</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[#283246] font-semibold mb-1">
+                    Paused ride
+                  </label>
+                  <select
+                    className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
+                    defaultValue="no"
+                  >
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
               </div>
-              <div>
-                <label className="block text-[#283246] font-semibold mb-1">
-                  Paused Ride
-                </label>
-                <select
-                  className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
-                  defaultValue="no"
-                >
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-              </div>
-            </div>
 
             <div className="mt-8 items-left text-start gap-2 flex">
               <button className="bg-gradient-to-r from-gray-600 to-[#283246] text-white w-40">

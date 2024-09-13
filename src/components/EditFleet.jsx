@@ -127,7 +127,7 @@ const EditFleet = () => {
               <div className="grid grid-cols-1 gap-4 md:grid-cols-3 text-start">
                 <div className="my-1">
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Name
+                    Name<span className="text-red-500 mx-1">*</span>
                   </label>
                   <input
                     type="text"
@@ -141,7 +141,7 @@ const EditFleet = () => {
                 </div>
                 <div>
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Support Email
+                    Support Email<span className="text-red-500 mx-1">*</span>
                   </label>
                   <input
                     type="text"
@@ -151,7 +151,7 @@ const EditFleet = () => {
                 </div>
                 <div>
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Alert Email
+                    Alert Email<span className="text-red-500 mx-1">*</span>
                   </label>
                   <input
                     type="text"
@@ -162,7 +162,7 @@ const EditFleet = () => {
 
                 <div className="my-1">
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Fleet Type
+                    Fleet Type<span className="text-red-500 mx-1">*</span>
                   </label>
                   <select
                     defaultValue={fleet?.type}
@@ -174,7 +174,7 @@ const EditFleet = () => {
                 </div>
                 <div className="my-1">
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Billing Plan
+                    Billing Plan<span className="text-red-500 mx-1">*</span>
                   </label>
                   <CustomDropdown
                     options={billingOptions}
@@ -209,7 +209,7 @@ const EditFleet = () => {
               <div className="grid grid-cols-1 gap-4 md:grid-cols-3 text-start">
                 <div className="my-1">
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Parking Requirement
+                    Parking requirement
                   </label>
                   <select
                     className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
@@ -220,7 +220,8 @@ const EditFleet = () => {
                 </div>
                 <div>
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Auto end Ride - idele vehicle
+                    Auto end ride - idle vehicle
+                    <span className="text-red-500 mx-1">*</span>
                   </label>
                   <input
                     type="text"
@@ -230,7 +231,8 @@ const EditFleet = () => {
                 </div>
                 <div>
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Auto end Ride - Paused Vehicle
+                    Auto end ride - paused vehicle
+                    <span className="text-red-500 mx-1">*</span>
                   </label>
                   <input
                     type="text"
@@ -241,18 +243,20 @@ const EditFleet = () => {
 
                 <div className="my-1">
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Auto end Ride - Critical Battery Vehicle
+                    Auto end ride - critical battery vehicle
+                    <span className="text-red-500 mx-1">*</span>
                   </label>
                   <select
                     className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
-                    defaultValue="not required"
+                    defaultValue="not application"
                   >
                     <option value="not applicable">Not Applicable</option>
                   </select>
                 </div>
                 <div>
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Low Battery Level
+                    Low battery level
+                    <span className="text-red-500 mx-1">*</span>
                   </label>
                   <select
                     className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
@@ -264,7 +268,7 @@ const EditFleet = () => {
                 </div>
                 <div>
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Auto Close Vehicle
+                    Auto close vehicle
                   </label>
                   <select
                     className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
@@ -277,7 +281,7 @@ const EditFleet = () => {
 
                 <div className="">
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Distance to Lock & unlock Vehicle
+                    Distance to lock & unlock vehicle
                   </label>
                   <select
                     className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"
@@ -289,7 +293,7 @@ const EditFleet = () => {
                 </div>
                 <div>
                   <label className="block text-[#283246] font-semibold mb-1">
-                    Paused Ride
+                    Paused ride
                   </label>
                   <select
                     className="border border-gray-300 bg-white rounded-xl p-2 w-full text-gray-400 font-medium"

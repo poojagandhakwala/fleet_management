@@ -183,7 +183,7 @@ const Fleets = () => {
                             </div>
                             <p className='text-[#283246] text-base font-semibold my-2'>Are you sure you want to Delete?</p>
                             <div className="mt-3 flex gap-4 pb-4">
-                                <button className="bg-gradient-to-r from-gray-600 to-[#283246] text-white w-40 py-2 rounded-lg shadow-md">Delete</button>
+                                <button className="bg-gradient-to-r from-gray-600 to-[#283246] text-white w-40 py-2 rounded-lg shadow-md" onClick={()=>setDeleteIndex(null)}>Delete</button>
                                 <button className='border border-[#283246] rounded-xl text-[#283246] w-40 shadow-md' onClick={()=>setDeleteIndex(null)}>Cancel</button>
                                 </div>
                         </div>
