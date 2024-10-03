@@ -9,6 +9,7 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import CustomDropdown from "../custom/CustomDropDown";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const EditFleet = () => {
   const navigate = useNavigate();
@@ -48,12 +49,15 @@ const EditFleet = () => {
       setForm((prev) => ({ ...prev, billing: localStorage?.billing }));
 
     const res = axios
-      .put(`http://localhost:8080/fleets/${fleet?.name}`, form)
+      .put(`https://fleet-management-server.vercel.app/fleets/${fleet?.name}`, form)
       .then(() => {
         if (res.status === 201) {
         }
         toast.success("Fleet Updated Successfully!");
       });
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
   };
 
   return (

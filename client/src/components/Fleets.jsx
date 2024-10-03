@@ -79,7 +79,7 @@ const Fleets = () => {
     const trimmedName = name.trim(); // Remove extra spaces from the name
 
     axios
-      .delete(`http://localhost:8080/fleets/${encodeURIComponent(trimmedName)}`)
+      .delete(`https://fleet-management-server.vercel.app/fleets/${encodeURIComponent(trimmedName)}`)
       .then((res) => {
         if (res.status === 404) {
           toast.warn("Fleet not found!");
@@ -110,7 +110,7 @@ const Fleets = () => {
   const fetchData = async () => {
     try {
       // const response = await axios.get('https://run.mocky.io/v3/0b206f36-520b-4b7a-886e-74b483e792aa')
-      const response = await axios.get("http://localhost:8080/fleets");
+      const response = await axios.get("https://fleet-management-server.vercel.app/fleets");
       setData(response.data);
       setLoading(false);
     } catch (error) {

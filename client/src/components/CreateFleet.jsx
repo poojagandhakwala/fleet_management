@@ -24,27 +24,12 @@ const CreateFleet = () => {
     createdDate: "",
   });
 
-  // useEffect(()=>{
-  //   const res=axios.post("http://localhost:8080/add-fleet",
-  //     {
-  //       "name": "New Fleet",
-  //       "type": "Private",
-  //       "billing": "Private",
-  //       "location": "New Road",
-  //       "email": "newfleet@gmail.com",
-  //       "createdDate": "09/01/2024"
-  //     }
-
-  //   );
-  //   console.log("Res = ",res)
-  // },[])
-
   const addFleet = async (e) => {
     e.preventDefault();
-    console.log("form ", form);
+    // console.log("form ", form);
 
     const res = await axios
-      .post("http://localhost:8080/add-fleet", form)
+      .post("https://fleet-management-server.vercel.app/add-fleet", form)
       .then((response) => {
         if (response.status === 201) {
         }
@@ -284,7 +269,7 @@ const CreateFleet = () => {
                   type="submit"
                   className="bg-gradient-to-r from-gray-600 to-[#283246] text-white w-40"
                   onClick={(e) => {
-
+                    e.preventDefault();
                     setForm((prevForm) => {
                       const updatedBilling =
                         localStorage?.billing || prevForm.type;
