@@ -39,7 +39,7 @@ app.put("/fleets/:name", (req, res) => {
   }
 
   fleets[fleetIndex] = { ...fleets[fleetIndex], ...updatedFleet };
-  fs.writeFileSync("./data.json", JSON.stringify(fleets, null, 2), "utf-8");
+  // fs.writeFileSync("./data.json", JSON.stringify(fleets, null, 2), "utf-8");
 
   res.json({
     message: "Fleet updated successfully",
